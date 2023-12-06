@@ -148,9 +148,9 @@
     <div class="tab" style="display: flex; justify-content: center;">
         <a href="#About " class="tablinks centered" onclick="openTab('About')">About</a>
         <a href="#Education" class="tablinks centered" onclick="openTab('Education')">Education</a>
-        <a href="#Skills" class="tablinks centered">Skills</a>
+        <a href="#Skills" class="tablinks centered" onclick="openTab(event, 'Skills')">Skills</a>
         <a href="#Projects" class="tablinks centered">Projects</a>
-        <a href="#ContactMe" class="tablinks centered">Contact Me</a>
+        <a href="#Contacts" class="tablinks centered">Contacts</a>
     </div>
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <div style="display: flex; justify-content: center; align-items: center;">
@@ -194,8 +194,8 @@
         <h3>Projects</h3>
         <p>Content for Projects.</p>
     </div>
-    <div id="ContactMe" class="tabcontent">
-        <h3>Contact Me</h3>
+    <div id="Contacts" class="tabcontent">
+        <h3>Contact</h3>
         <p>Content for Contact Me.</p>
     </div>
 
@@ -218,8 +218,8 @@
         <h3>Projects</h3>
         <p>Content for Projects.</p>
     </div>
-    <div id="ContactMe" class="tabcontent">
-        <h3>Contact Me</h3>
+    <div id="Contacts" class="tabcontent">
+        <h3>Contact</h3>
         <p>Content for Contact Me.</p>
     </div>
     <div style="position: fixed; top: 10px; right: 10px;">
@@ -240,6 +240,12 @@
         document.getElementById('themeSwitch').addEventListener('change', function() {
             document.body.classList.toggle('dark-mode', this.checked);
         });
+        window.onload = function() {
+            document.querySelector('.tablinks[href="#Skills"]').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.getElementById('Skills').scrollIntoView({ behavior: 'smooth' });
+            });
+        }
     </script>
 </body>
 </html>
