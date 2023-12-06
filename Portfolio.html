@@ -12,8 +12,8 @@
         /* Style the tab */
         .tab {
             overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            border: 1px solid #8d9c9d;
+            background-color: #8d9c9d;
         }
         .tab {
             display: flex;
@@ -34,7 +34,7 @@
         .tabcontent {
             display: none;
             padding: 6px 12px;
-            border: 1px solid #ccc;
+            border: 1px solid #8d9c9d;
             border-top: none;
         }
         img {
@@ -47,21 +47,39 @@
             padding: 10px 20px; /* Add padding to make the links look like tabs */
             text-decoration: none; /* Remove the underline from the links */
             display: inline-block; /* Make the links block elements */
-            background-color: #f2f2f2; /* Add a background color to the tabs */
-            border: 1px solid #ccc; /* Add a border around the tabs */
+            background-color: #8d9c9d; /* Add a background color to the tabs */
+            border: 1px solid #8d9c9d; /* Add a border around the tabs */
             border-bottom: none; /* Remove the bottom border to make it look like a tab */
+            font-size: 40px; /* Adjust as needed */
         }
         .tablinks:hover {
-            background-color: #9c6ba7; /* Change the background color when hovering over the tab */
+            background-color: #8d9c9d; /* Change the background color when hovering over the tab */
         }
         .tablinks.active {
-            background-color: #680707; /* Change the background color of the active tab */
+            background-color: #8d9c9d; /* Change the background color of the active tab */
+        }
+        .image-container {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh; /* This makes the container take up the full height of the viewport */
+        }
+
+        .tab {
+            order: -1; /* This makes the tab appear above the title */
+        }
+        .centered {
+            font-size: 3em; /* Adjust as needed */
+            text-align: center;
         }
     </style>
     
     <script>
         function greetUser() {
-            alert("Hello, welcome to my website!");
+            alert("Hello, welcome to my Personal Portfolio!");
         }
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -79,27 +97,42 @@
     </script>
 </head>
 <body onload="greetUser()">
-    <h1 class="centered">Phillipp Cun</h1>
     <div class="tab">
-        <a href="Portfolio.html" class="tablinks centered">Home</a>
-
-        <a href="Projects.html" class="tablinks centered">Projects</a>
-
-        <a href="ContactMe.html" class="tablinks centered">Contact Me</a>
+        <a href="#About" class="tablinks centered">About</a>
+        <a href="#Education" class="tablinks centered">Education</a>
+        <a href="#Skills" class="tablinks centered">Skills</a>
+        <a href="#Projects" class="tablinks centered">Projects</a>
+        <a href="#ContactMe" class="tablinks centered">Contact Me</a>
     </div>
+    <h1 class="centered container" style="margin-top: -1in; font-weight: bold; font-size: 100px;">Phillipp Cun</h1>
+    <div class="centered">
+        <a href="https://github.com/pcun89" target="_blank">
+            <img src="GitHub.png" alt="GitHub" />
+        <a href="https://www.linkedin.com/in/pcun" target="_blank">
+            <img src="linkedin .png" alt="LinkedIn" />
+        </a>
+    </div>
+</div>
     <div id="Home" class="tabcontent">
-        <h3>Home</h3>
-        <p>Content for Home.</p>
+        <h3>About</h3>
+        <p>Content for About.</p>
+    </div>
+    <div id="Education" class="tabcontent">
+        <h3>Education</h3>
+        <p>Content for Education.</p>
+    </div>
+    <div id="Skills" class="tabcontent">
+        <h3>Skills</h3>
+        <p>Content for Skills.</p>
     </div>
     <div id="Projects" class="tabcontent">
         <h3>Projects</h3>
         <p>Content for Projects.</p>
     </div>
-    <div id="Contact Me" class="tabcontent">
+    <div id="ContactMe" class="tabcontent">
         <h3>Contact Me</h3>
         <p>Content for Contact Me.</p>
     </div>
-    <img src="IMG_2041.jpeg" alt="description_of_image" style="width: 500px; height: auto;">
-    <p>This is a simple website created for me to add my projects.</p>
+   
 </body>
 </html>
