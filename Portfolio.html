@@ -30,17 +30,6 @@
             padding: 14px 16px;
             transition: 0.3s;
         }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
-        }
-
         /* Style the tab content */
         .tabcontent {
             display: none;
@@ -53,9 +42,20 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .image-text-container {
-            display: flex;
-            justify-content: center;
+        .tablinks {
+            margin: 0 20px; /* Adjust the value as needed */
+            padding: 10px 20px; /* Add padding to make the links look like tabs */
+            text-decoration: none; /* Remove the underline from the links */
+            display: inline-block; /* Make the links block elements */
+            background-color: #f2f2f2; /* Add a background color to the tabs */
+            border: 1px solid #ccc; /* Add a border around the tabs */
+            border-bottom: none; /* Remove the bottom border to make it look like a tab */
+        }
+        .tablinks:hover {
+            background-color: #9c6ba7; /* Change the background color when hovering over the tab */
+        }
+        .tablinks.active {
+            background-color: #680707; /* Change the background color of the active tab */
         }
     </style>
     
@@ -81,9 +81,11 @@
 <body onload="greetUser()">
     <h1 class="centered">Phillipp Cun</h1>
     <div class="tab">
-        <button class="tablinks centered">Home</button>
-        <button class="tablinks centered">Projects</button>
-        <button class="tablinks centered">Contact Me</button>
+        <a href="Portfolio.html" class="tablinks centered">Home</a>
+
+        <a href="Projects.html" class="tablinks centered">Projects</a>
+
+        <a href="ContactMe.html" class="tablinks centered">Contact Me</a>
     </div>
     <div id="Home" class="tabcontent">
         <h3>Home</h3>
@@ -96,9 +98,8 @@
     <div id="Contact Me" class="tabcontent">
         <h3>Contact Me</h3>
         <p>Content for Contact Me.</p>
-    <div class="image-text-container">
-        <img src="IMG_2041.jpeg" alt="description_of_image" style="width: 500px; height: auto;">
-        <p>This is a simple website created for me to add my projects.</p>
     </div>
+    <img src="IMG_2041.jpeg" alt="description_of_image" style="width: 500px; height: auto;">
+    <p>This is a simple website created for me to add my projects.</p>
 </body>
 </html>
