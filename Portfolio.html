@@ -79,7 +79,7 @@
     
     <script>
         function greetUser() {
-            alert("Hello, welcome to my Personal Portfolio!");
+            alert("Hello, Welcome to Phillipp's Personal Portfolio!");
         }
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -97,21 +97,53 @@
     </script>
 </head>
 <body onload="greetUser()">
-    <div class="tab">
-        <a href="#About" class="tablinks centered">About</a>
+    <div class="tab" style="display: flex; justify-content: center;">
+        <a href="#About" class="tablinks centered" onclick="openTab('About')">About</a>
         <a href="#Education" class="tablinks centered">Education</a>
         <a href="#Skills" class="tablinks centered">Skills</a>
         <a href="#Projects" class="tablinks centered">Projects</a>
         <a href="#ContactMe" class="tablinks centered">Contact Me</a>
     </div>
-    <h1 class="centered container" style="margin-top: -1in; font-weight: bold; font-size: 100px;">Phillipp Cun</h1>
-    <div class="centered">
-        <a href="https://github.com/pcun89" target="_blank">
-            <img src="GitHub.png" alt="GitHub" />
-        <a href="https://www.linkedin.com/in/pcun" target="_blank">
-            <img src="linkedin .png" alt="LinkedIn" />
-        </a>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <h1 class="centered container" style="margin-top: -1in; font-weight: bold; font-size: 100px;">Phillipp Cun</h1>
+            <div style="display: flex; justify-content: center;">
+                <div style="display: flex; justify-content: center; margin-top: 96px; margin-left: -480px;">
+                    <a href="https://github.com/pcun89" target="_blank">
+                        <img src="GitHub.png" alt="GitHub" style="width: 50px; height: 50px; display: inline-block; margin-right: 10px;" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/pcun" target="_blank">
+                        <img src="linkedin .png" alt="LinkedIn" style="width: 50px; height: 50px; display: inline-block;" />
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id="About" class="tabcontent" style="background-color: lightblue;">
+        <h3 style="text-align: center; font-weight: bold; font-size: 50px;">About</h3>
+        <p style="text-align: center; font-size: 25px;">I'm a senior at The University Of Iowa. As a Computer Science major, I am fascinated by how complex there's more than</p>
+        <p style="text-align: center; font-size: 25px;">one way you can approach a problem, and I am also interested in how accessible it is. I have an interest in software</p>
+        <p style="text-align: center; font-size: 25px;">engineering and machine learning where I can expland my knowledge. I will be relocating to Philadelphia, PA in June, 2024.</p>
+    </div>
+    <div id="Education" class="tabcontent">
+        <h3>Education</h3>
+        <p>Content for Education.</p>
+    </div>
+    <div id="Skills" class="tabcontent">
+        <h3>Skills</h3>
+        <p>Content for Skills.</p>
+    </div>
+    <div id="Projects" class="tabcontent">
+        <h3>Projects</h3>
+        <p>Content for Projects.</p>
+    </div>
+    <div id="ContactMe" class="tabcontent">
+        <h3>Contact Me</h3>
+        <p>Content for Contact Me.</p>
+    </div>
+
+    </body>
+    </html>
 </div>
     <div id="Home" class="tabcontent">
         <h3>About</h3>
@@ -133,6 +165,17 @@
         <h3>Contact Me</h3>
         <p>Content for Contact Me.</p>
     </div>
-   
+    <script>
+        function openTab(tabId) {
+            // Get all elements with class="tabcontent" and hide them
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Show the current tab
+            document.getElementById(tabId).style.display = "block";
+        }
+    </script>
 </body>
 </html>
