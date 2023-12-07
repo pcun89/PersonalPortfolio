@@ -7,13 +7,13 @@
             text-align: center;
         }
         body {
-            background-color: #8d9c9d; /* Change this to your preferred color */
+            background-color: rgb(145, 214, 237); /* Change this to your preferred color */
         }
         /* Style the tab */
         .tab {
             overflow: hidden;
-            border: 1px solid #8d9c9d;
-            background-color: #8d9c9d;
+            border: 1px solid #efeceb;
+            background-color: #efeceb;
         }
         .tab {
             display: flex;
@@ -34,7 +34,7 @@
         .tabcontent {
             display: none;
             padding: 6px 12px;
-            border: 1px solid #8d9c9d;
+            border: 1px solid #efeceb;
             border-top: none;
         }
         img {
@@ -47,16 +47,16 @@
             padding: 10px 20px; /* Add padding to make the links look like tabs */
             text-decoration: none; /* Remove the underline from the links */
             display: inline-block; /* Make the links block elements */
-            background-color: #8d9c9d; /* Add a background color to the tabs */
-            border: 1px solid #8d9c9d; /* Add a border around the tabs */
+            background-color: rgb(249, 247, 247); /* Add a background color to the tabs */
+            border: 1px solid rgb(254, 253, 253); /* Add a border around the tabs */
             border-bottom: none; /* Remove the bottom border to make it look like a tab */
             font-size: 40px; /* Adjust as needed */
         }
         .tablinks:hover {
-            background-color: #8d9c9d; /* Change the background color when hovering over the tab */
+            background-color: rgb(252, 249, 249); /* Change the background color when hovering over the tab */
         }
         .tablinks.active {
-            background-color: #8d9c9d; /* Change the background color of the active tab */
+            background-color: #f8f6f6; /* Change the background color of the active tab */
         }
         .image-container {
             text-align: center;
@@ -78,27 +78,6 @@
         input[type="checkbox"].theme-switch {
             display: none;
         }
-
-        label.theme-switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-
-        label.theme-switch::before {
-            content: "";
-            position: absolute;
-            right: 0; /* Changed from left to right */
-            top: 0;
-            width: 26px;
-            height: 26px;
-            background-color: #333; /* Changed from white to #333 */
-            border: 4px solid #999; /* Changed from #ccc to #999 */
-            border-radius: 50%;
-            transition: all 0.4s;
-        }
-
         input[type="checkbox"].theme-switch:checked + label.theme-switch::before {
             transform: translateX(-26px); /* Changed from translateX(26px) to translateX(-26px) */
             background-color: white; /* Changed from #333 to white */
@@ -118,10 +97,24 @@
             color: #fff; /* or any light color of your choice */
         }
         body.dark-mode .tabcontent {
-            background-color: #d41212; /* or any dark color of your choice */
+            background-color: #f8f4f4; /* or any dark color of your choice */
         }
         body.dark-mode .tabcontent {
             color: #946d91; /* or any light color of your choice */
+        }
+        #Contacts {
+            text-align: center;
+        }
+        .theme-switch {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .theme-switch input {
+            display: none;
         }
     </style>
     
@@ -148,20 +141,26 @@
     <div class="tab" style="display: flex; justify-content: center;">
         <a href="#About " class="tablinks centered" onclick="openTab('About')">About</a>
         <a href="#Education" class="tablinks centered" onclick="openTab('Education')">Education</a>
-        <a href="#Skills" class="tablinks centered" onclick="openTab(event, 'Skills')">Skills</a>
+        <a href="#Skills" class="tablinks centered">Skills</a>
         <a href="#Projects" class="tablinks centered">Projects</a>
         <a href="#Contacts" class="tablinks centered">Contacts</a>
     </div>
+    <header>
+        <label for="theme-switch" class="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            Light/Dark Mode
+        </label>
+    </header>
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <div style="display: flex; justify-content: center; align-items: center;">
             <h1 class="centered container" style="margin-top: -1in; font-weight: bold; font-size: 100px;">Phillipp Cun</h1>
             <div style="display: flex; justify-content: center;">
                 <div style="display: flex; justify-content: center; margin-top: 96px; margin-left: -480px;">
                     <a href="https://github.com/pcun89" target="_blank">
-                        <img src="GitHub.png" alt="GitHub" style="width: 50px; height: 50px; display: inline-block; margin-right: 10px;" />
+                        <img src="GitHub.png" alt="GitHub" style="width: 50px; height: 50px; display: inline-block; margin-right: 10px; border-radius: 50%;" />
                     </a>
                     <a href="https://www.linkedin.com/in/pcun" target="_blank">
-                        <img src="linkedin .png" alt="LinkedIn" style="width: 50px; height: 50px; display: inline-block;" />
+                        <img src="linkedin .png" alt="LinkedIn" style="width: 50px; height: 50px; display: inline-block; border-radius: 50%;" />
                     </a>
                 </div>
             </div>
@@ -188,40 +187,29 @@
     </div>
     <div id="Skills" class="tabcontent">
         <h3>Skills</h3>
-        <p>Content for Skills.</p>
+        <div class="text-bubbles">
+            <ul>
+                <li>Proficient in programming languages: Java, Python, JavaScript</li>
+                <li>Experience with web development: HTML, CSS, React.js</li>
+                <li>Database management: SQL, MongoDB</li>
+                <li>Version control systems: Git, GitHub</li>
+                <li>Problem-solving and critical thinking</li>
+                <li>Effective communication and teamwork</li>
+            </ul>
+        </div>
     </div>
-    <div id="Projects" class="tabcontent">
-        <h3>Projects</h3>
+    <div id="Projects" class="tabcontent" style="background-color: rgb(182, 218, 182);">
+        <h3 style="font-weight: bold;">Projects</h3>
         <p>Content for Projects.</p>
     </div>
-    <div id="Contacts" class="tabcontent">
-        <h3>Contact</h3>
-        <p>Content for Contact Me.</p>
+    <div id="Contacts" class="tabcontent" style="background-color: rgb(182, 218, 182); font-size: 50px;">
+        <h3 style="font-weight: bold;">Contacts</h3>
+        <p>phillippcun89@gmail.com</p>
+        <p>515-822-6693<p>
     </div>
-
     </body>
     </html>
 </div>
-    <div id="Home" class="tabcontent">
-        <h3>About</h3>
-        <p>Content for About.</p>
-    </div>
-    <div id="Education" class="tabcontent">
-        <h3>Education</h3>
-        <p>Content for Education.</p>
-    </div>
-    <div id="Skills" class="tabcontent">
-        <h3>Skills</h3>
-        <p>Content for Skills.</p>
-    </div>
-    <div id="Projects" class="tabcontent">
-        <h3>Projects</h3>
-        <p>Content for Projects.</p>
-    </div>
-    <div id="Contacts" class="tabcontent">
-        <h3>Contact</h3>
-        <p>Content for Contact Me.</p>
-    </div>
     <div style="position: fixed; top: 10px; right: 10px;">
         <input type="checkbox" id="themeSwitch" />
         <label for="themeSwitch" class="theme-switch"></label>
@@ -246,6 +234,24 @@
                 document.getElementById('Skills').scrollIntoView({ behavior: 'smooth' });
             });
         }
+        document.querySelectorAll('.tablinks').forEach(item => {
+            item.addEventListener('click', event => {
+                // Hide all tabcontent divs
+                document.querySelectorAll('.tabcontent').forEach(item => {
+                    item.style.display = 'none';
+                });
+
+                // Show the clicked tabcontent div
+                document.querySelector(event.target.getAttribute('href')).style.display = 'block';
+            })
+        })
+        document.getElementById('theme-switch').addEventListener('change', function(event) {
+            if (event.target.checked) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        });
     </script>
 </body>
 </html>
