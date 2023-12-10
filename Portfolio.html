@@ -185,16 +185,19 @@
             </div>
         </div>
     </div>
-    <div id="Skills" class="tabcontent">
-        <h3>Skills</h3>
-        <div class="text-bubbles">
-            <ul>
-                <li>Proficient in programming languages: Java, Python, JavaScript</li>
-                <li>Experience with web development: HTML, CSS, React.js</li>
-                <li>Database management: SQL, MongoDB</li>
-                <li>Version control systems: Git, GitHub</li>
-                <li>Problem-solving and critical thinking</li>
-                <li>Effective communication and teamwork</li>
+    <div id="Skills" class="tabcontent" style="background-color: rgb(182, 218, 182); text-align: center; margin-left: 96px; margin-right: 96px;">
+        <h3 style="font-size: 50px; text-decoration: underline;"><b>Skills & Tools</b></h3>
+        <div class="text-bubbles" style="font-size: 30px; text-align: center; margin: 0 auto;">
+            <ul style="text-align: left;">
+                <li><b>Proficient in programming languages:</b> Java, Python, JavaScript, C, Assembly (x86-64)</li>
+                <li><b>Experience with web development:</b> HTML, CSS, React.js, Django, Flask</li>
+                <li><b>IDEs:</b> Visual Studio, PyCharm, IntelliJ</li>
+                <li><b>Software Development Methodologies:</b> Scrum, Agile, Agile Methodologies</li>
+                <li><b>Version control systems:</b> Git, GitHub, GitLab</li>
+                <li><b>Operating systems:</b> Windows, Linux, MacOS</li>
+                <li><b>Testing:</b> JUnit, Integrations Testing</li>
+                <li><b>Scripting:</b> Bash, PowerShell, Pandas, NumPy</li>
+                <li><b>Networking:</b> TCP/IP, UDP, HTTP, HTTPS, FTP, SSH, DNS</li>
             </ul>
         </div>
     </div>
@@ -210,10 +213,7 @@
     </body>
     </html>
 </div>
-    <div style="position: fixed; top: 10px; right: 10px;">
-        <input type="checkbox" id="themeSwitch" />
-        <label for="themeSwitch" class="theme-switch"></label>
-    </div>
+    
     <script>
         function openTab(tabId) {
             // Get all elements with class="tabcontent" and hide them
@@ -225,9 +225,6 @@
             // Show the current tab
             document.getElementById(tabId).style.display = "block";
         }
-        document.getElementById('themeSwitch').addEventListener('change', function() {
-            document.body.classList.toggle('dark-mode', this.checked);
-        });
         window.onload = function() {
             document.querySelector('.tablinks[href="#Skills"]').addEventListener('click', function(event) {
                 event.preventDefault();
