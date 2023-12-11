@@ -14,8 +14,6 @@
             overflow: hidden;
             border: 1px solid #efeceb;
             background-color: #efeceb;
-        }
-        .tab {
             display: flex;
             justify-content: center;
         }
@@ -23,12 +21,12 @@
         /* Style the buttons inside the tab */
         .tab button {
             background-color: inherit;
-            float: left;
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 16px;
+            padding: 25px 25px;
             transition: 0.3s;
+            line-height: 50px; /* adjust as needed */
         }
         /* Style the tab content */
         .tabcontent {
@@ -46,7 +44,7 @@
             margin: 0 20px; /* Adjust the value as needed */
             padding: 10px 20px; /* Add padding to make the links look like tabs */
             text-decoration: none; /* Remove the underline from the links */
-            display: inline-block; /* Make the links block elements */
+            display: block; /* Make the links block elements */
             background-color: rgb(249, 247, 247); /* Add a background color to the tabs */
             border: 1px solid rgb(254, 253, 253); /* Add a border around the tabs */
             border-bottom: none; /* Remove the bottom border to make it look like a tab */
@@ -65,7 +63,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            height: 100vh; /* This makes the container take up the full height of the viewport */
+            /*height: 100vh; /* This makes the container take up the full height of the viewport */
         }
 
         .tab {
