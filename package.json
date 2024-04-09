@@ -1,0 +1,14 @@
+{
+    "name": "personal-portfolio",
+    "version": "1.0.0",
+    "description": "Phillipp Cun's Personal Portfolio",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "author": "Phillipp Cun",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }

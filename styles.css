@@ -1,0 +1,27 @@
+.centered {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(145, 214, 237); /* Change this to your preferred color */
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #efeceb;
+    background-color: #efeceb;
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 25px 25px;
+    transition: 0.3s;
+    line-height: 50px; /* adjust as needed */
+}
